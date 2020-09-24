@@ -9,6 +9,7 @@ function changeState(state, action){
 
 function dispatch(action){
   state = changeState(state, action)
+  render()
   return state
 }
  
@@ -19,4 +20,4 @@ function render(){
 let state = {count: 0}
 let action = {type: 'INCREASE_COUNT'}
 
-render()
+dispatch(action)
